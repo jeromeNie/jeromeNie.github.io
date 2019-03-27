@@ -6,56 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>我的作品</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <form action="process.php">
-        <div>
-            <label for="name">姓名</label>
-            <input type="text" name='name' id='name' placeholder="请输入用户名">
-        </div>
-        <div>
-            <label for="age">年龄</label>
-            <input type="number" name='age' id='age' placeholder="请输入年龄">
-        </div>
-        <div>
-            <label for="email">邮箱</label>
-            <input type="email" name="email" id="email" placeholder="请输入邮箱">
-        </div>
-        <div>
-            <label for="password">密码</label>
-            <input type="password" name="password" id="password" placeholder="请输入密码">
-        </div>
-        <div>
-            <label for="birthday">生日</label>
-            <input type="date" name='birthday' id='birthday'>
-        </div>
-        <div>
-            <label for="sex">性别</label>
-            <select name="sex" id="sex">
-                <option value="male">男</option>
-                <option value="female">女</option>
-            </select>
-        </div>
-        <div>
-            <label for="message">信息</label>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        </div>
-        <div>
-            <label for="membership">成员</label>
-            <input type="radio" name='menbership' id='membership' value='vue'>vue
-            <input type="radio" name='menbership' id='membership' value='angular'>angular
-            <input type="radio" name='menbership' id='membership' value='react'>react
-        </div>
-        <div>
-            <label for="membership1">成员C</label>
-            <input type="checkbox" name='membership1' id='membership1' value='vue'>vue
-            <input type="checkbox" name='membership1' id='membership1' value='angular'>angular
-            <input type="checkbox" name='membership1' id='membership1' value='react'>react
-        </div>
-        <input type="submit" value='注册'>
-        <button type='reset'>重置</button>
-    </form>
+    <div class="container">
+        <nav class='navbar'>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#service">服务</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+        </nav>
+        <section id='home'>
+            <h2>欢迎来到我的页面</h2>
+            <p class='lead'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, voluptas!
+            </p>
+        </section>
+        <section id='about'>
+            <h2>关于我的个人网页</h2>
+            <p class='lead'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, voluptas!
+            </p>
+        </section>
+        <section id='service'>
+            <h2>我们的更多服务</h2>
+            <p class='lead'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, voluptas!
+            </p>
+        </section>
+        <section id='contact'>
+            <h2>我的联系方式：251522608</h2>
+            <p class='lead'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, voluptas!
+            </p>
+        </section>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src='./main.js'></script>
 </body>
 
 </html>
