@@ -1,72 +1,65 @@
-*{
-	margin:0;
-	padding:0;
-}
 body{
-	font-family: Arial, Helvetica, sans-serif;
-	background:#333;
-	color:#ccc;
-	height:100vh;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:17px;
 	line-height:1.6;
-	overflow:hidden;
 }
-.container{
+#btn{
+	background:coral;
+	border:none;
+	color:#fff;
+	padding:10px 15px;
+	outline:none;
+	border-radius:5px;
+	cursor:pointer;
+}
+#btn:hover{
+	color:yellowgreen;
+}
+.modal{
 	width:100%;
 	height:100%;
-	overflow-y:scroll;
-	scroll-behavior: smooth;
-	scroll-snap-type:y mandatory;
-}
-.navbar{
+	background:rgba(0,0,0,0.5);
 	position:fixed;
 	top:0;
+	left:0;
 	z-index:1;
-	width:100%;
-	height:60px;
-	background:rgba(0,0,0,0.7)
+	overflow:auto;
+	display:none;
 }
-.navbar ul{
-	display:flex;
-	justify-content: center;
-	list-style:none;
+.modal-content{
+	background:#f4f4f4;
+	margin:20% auto;
+	width:80%;
+	box-shadow:0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+	animation-name:modalopen;
+	animation-duration: 1s;
 }
-.navbar ul li{
-	float:left;
-	margin:0 1rem;
-	padding:1rem;
+.modal-content header{
+	background:coral;
+	color:#fff;
+	padding:15px;
 }
-.navbar ul li a{
+.modal-content header h1{margin:0;}
+.closebtn{
+	float:right;
+	font-size: 30px;
+	color:#fff;
+}
+.closebtn:hover,.closebtn:focus{
+	color:#000;
+	cursor:pointer;
 	text-decoration:none;
-	color:#ccc;
 }
-.navbar ul li a:hover{
-	color:skyblue;
-}
-section{
+.modal-content footer p{
 	text-align:center;
-	width:100%;
-	height:100vh;
-	display:flex;
-	flex-direction:column;
-	justify-content: center;
-	align-items: center;
-	scroll-snap-align: center;
+	background:coral;
+	color:#fff;
+	padding:10px;
 }
-.container section h1{
-	font-size:2rem;
+.modal-content main{
+	padding:10px 20px;
 }
-.lead{
-	font-size:1.5rem;
-}
-#index{
-	background:url(https://images.pexels.com/photos/839465/pexels-photo-839465.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260) no-repeat center;
-}
-#product{
-	background:url(https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260) no-repeat center;
-}
-#about{
-	background:url(https://images.pexels.com/photos/1661004/pexels-photo-1661004.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260) no-repeat center;
-}
-#contact{
-	background:url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260) no-repeat center;
+@keyframes modalopen{
+	from{transform:scale(0)}
+	to{transform:scale(1)}
 }
