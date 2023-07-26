@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 12px;
+    }
+
+    .fontStyle {
+        color: #fff;
+    }
+
+    .resume-wrapper {
+        width: 40vw;
+        height: 90vh;
+        background-color: #fff;
+        margin: 0 auto;
+        box-shadow: 0px 0px 5px #ccc;
+    }
+
+    .resume-wrapper .title {
+        display: flex;
+        align-items: center;
+        width: 60%;
+        height: 50px;
+        margin-top: 10px;
+        border-radius: 0 50px 50px 0;
+        background-color: rgb(96, 122, 157);
+    }
+
+    .resume-wrapper .title .start {
+        margin: 0 8px 0 24px;
+        font-size: 30px;
+    }
+
+    .resume-wrapper .title .middle {
+        margin-right: 8px;
+        font-size: 30px;
+    }
+
+    .resume-wrapper .title .end {
+        font-size: 12px;
+    }
+
+    .resume-wrapper .title .end p {
+        line-height: 1.5;
+    }
+
+    .casule {
+        display: flex;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 30px;
+        border-radius: 30px;
+        position: relative;
+        left: -25px;
+        top: -15px;
+        background-color: rgb(96, 122, 157);
+        font-size: 14px;
+    }
+
+    .box {
+        width: 90%;
+        min-height: 100px;
+        margin: 0 32px;
+        border: 1px solid #ccc;
+        border-right: none;
+        border-bottom: none;
+        position: relative;
+    }
+
+    .box:nth-child(2) {
+        margin-top: 32px;
+    }
+
+    .box:last-child {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .box .baseinfo-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 24px;
+        padding-bottom: 24px;
+    }
+
+    .box .baseinfo-wrapper .baseinfo {
+        width: 60%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .box .baseinfo-wrapper .baseinfo p {
+        margin-right: 16px;
+        min-width: 100px;
+        white-space: nowrap;
+    }
+
+    .box .baseinfo-wrapper .imgBox {
+        width: 80px;
+        height: 80px;
+    }
+
+    .box .baseinfo-wrapper .imgBox img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .box .education {
+        margin: 0 24px;
+        padding-bottom: 24px;
+    }
+
+    .box .education .head {
+        display: flex;
+        justify-content: space-between;
+        color: rgb(96, 122, 157);
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .box .experiences {
+        margin: 0 24px;
+        padding-bottom: 24px;
+    }
+
+    .box .experiences .head {
+        display: flex;
+        justify-content: space-between;
+        color: rgb(96, 122, 157);
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .box .experiences .content {
+        margin-top: 8px;
+    }
+
+    .box .skill {
+        margin: 0 24px;
+        padding-bottom: 24px;
+    }
+
+    .box .certificate {
+        margin: 0 24px;
+        padding-bottom: 24px;
+    }
+
+    .box .self-evalution {
+        margin: 0 24px;
+        padding-bottom: 24px;
+    }
+</style>
+
+<body>
+    <div class="resume-wrapper">
+        <div class="title fontStyle">
+            <div class="start">个人简历</div>
+            <div class="middle">|</div>
+            <div class="end">
+                <p>PERSONAL_RESUME</p>
+                <p>我一直在努力成为更好的自己</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="casule">基本信息</div>
+            <div class="baseinfo-wrapper">
+                <div class="baseinfo">
+                    <p>姓名：聂锦锋</p>
+                    <p>年龄：27岁</p>
+                    <p>性别：男</p>
+                    <p>工作年限：3年</p>
+                    <p>求职岗位：web前端工程师</p>
+                    <p>联系电话：13659847942</p>
+                    <p>邮箱：partytu@163.com</p>
+                </div>
+                <div class="imgBox"><img src="./icon.png" alt=""></div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="casule">教育背景</div>
+            <div class="education">
+                <div class="head">
+                    <span>2013.9 ~ 2016.7</span>
+                    <span>晴川学院</span>
+                    <span>软件工程（本科）</span>
+                </div>
+                <div class="head">
+                    <span>2016.9 ~ 2018.9</span>
+                    <span>入伍</span>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </div>
+                <div class="head">
+                    <span>2018.9 ~ 2019.7</span>
+                    <span>晴川学院</span>
+                    <span>软件工程（本科）</span>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="casule">工作经验</div>
+            <div class="experiences">
+                <div class="head">
+                    <span>2019.7 ~ 2019.11</span>
+                    <span>厦门方根科技有限公司</span>
+                    <span>node开发工程师</span>
+                </div>
+                <div class="content">
+                    node爬虫采集网上的彩票开奖数据，创业公司风险较大。
+                </div>
+                <div class="head" style="margin-top: 16px;">
+                    <span>2019.11 ~ 至今</span>
+                    <span>北京博睿数据科技有限公司</span>
+                    <span>web前端开发工程师</span>
+                </div>
+                <div class="content">
+                    主导负责部门前端开发任务使用vue2.x开发web录制平台，录制app测试脚本<br>
+                    使用react hooks主导开发app测试性能数据平台<br>
+                    协助维护若干老的jsp、jQuery项目<br>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="casule">技术栈</div>
+            <div class="skill">
+                熟练使用react，熟悉生态；<br>
+                熟练掌握javascript、css、html；<br>
+                熟练使用git<br>
+                技术栈拓展：使用过vue2.x开发项目，完整学习过flutter，dart，但是无实际项目经验
+            </div>
+        </div>
+        <div class="box">
+            <div class="casule">荣誉证书</div>
+            <div class="certificate">
+                英语六级
+            </div>
+        </div>
+        <div class="box">
+            <div class="casule">自我评价</div>
+            <div class="self-evalution">
+                自学能力尚可，喜欢接纳新的技术，积极学习新的知识，熟悉web前端端开发整体流程。由于公司是做自研产品，项目经历可能并不是特别多，但是同一时期大概维护4-5个项目，包括jsp项目，纯html、nginx部署项目，vue项目，react项目。问题定位能力较强。
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
