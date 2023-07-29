@@ -15,15 +15,38 @@
         font-size: 12px;
     }
 
+    body {
+        padding: 16px 0;
+    }
+
     .fontStyle {
         color: #fff;
     }
 
+    .head-menu {
+        display: flex;
+        align-items: center;
+        width: 60%;
+        margin: 0 auto;
+        gap: 16px;
+    }
+
+    .head-menu a {
+        background-color: #1b95d2;
+        color: #fff;
+        font-size: 16px;
+        padding: 4px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
     .resume-wrapper {
-        width: 40vw;
-        height: 90vh;
+        width: 60%;
+        min-width: 570px;
+        /* height: 100vh; */
         background-color: #fff;
         margin: 0 auto;
+        padding-bottom: 16px;
         box-shadow: 0px 0px 5px #ccc;
     }
 
@@ -91,6 +114,7 @@
     .box .baseinfo-wrapper {
         display: flex;
         justify-content: space-between;
+        gap: 16px;
         margin: 0 24px;
         padding-bottom: 24px;
     }
@@ -130,6 +154,11 @@
         font-weight: 400;
     }
 
+    .box .education .head span {
+        display: block;
+        flex-basis: 140px;
+    }
+
     .box .experiences {
         margin: 0 24px;
         padding-bottom: 24px;
@@ -161,10 +190,31 @@
         margin: 0 24px;
         padding-bottom: 24px;
     }
+
+    .case-wrapper {
+        display: none;
+        width: 60%;
+        margin: 0 auto;
+    }
+    .case-wrapper .case-box h3 {
+        margin-top: 16px;
+        font-size: 18px;
+    }
+    .case-wrapper .case-box p{
+        margin-top: 8px;
+    }
+    .case-wrapper .case-box img{
+        width: 100%;
+        margin-top: 8px;
+    }
 </style>
 
 <body>
-    <div class="resume-wrapper">
+    <div class="head-menu">
+        <a onclick="changeTab('resume')">简历</a>
+        <a onclick="changeTab('case')">项目示例</a>
+    </div>
+    <div id="resume" class="resume-wrapper">
         <div class="title fontStyle">
             <div class="start">个人简历</div>
             <div class="middle">|</div>
@@ -178,9 +228,9 @@
             <div class="baseinfo-wrapper">
                 <div class="baseinfo">
                     <p>姓名：聂锦锋</p>
-                    <p>年龄：27岁</p>
+                    <p>年龄：28岁</p>
                     <p>性别：男</p>
-                    <p>工作年限：3年</p>
+                    <p>工作年限：4年</p>
                     <p>求职岗位：web前端工程师</p>
                     <p>联系电话：13659847942</p>
                     <p>邮箱：partytu@163.com</p>
@@ -199,7 +249,7 @@
                 <div class="head">
                     <span>2016.9 ~ 2018.9</span>
                     <span>入伍</span>
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span>工程兵</span>
                 </div>
                 <div class="head">
                     <span>2018.9 ~ 2019.7</span>
@@ -216,31 +266,31 @@
                     <span>厦门方根科技有限公司</span>
                     <span>node开发工程师</span>
                 </div>
-                <div class="content">
-                    node爬虫采集网上的彩票开奖数据，创业公司风险较大。
-                </div>
-                <div class="head" style="margin-top: 16px;">
+                <div class="head">
                     <span>2019.11 ~ 至今</span>
                     <span>北京博睿数据科技有限公司</span>
                     <span>web前端开发工程师</span>
                 </div>
                 <div class="content">
-                    主导负责部门前端开发任务使用vue2.x开发web录制平台，录制app测试脚本<br>
-                    使用react hooks主导开发app测试性能数据平台<br>
-                    协助维护若干老的jsp、jQuery项目<br>
+                    1、维护若干老的jsp、jQuery项目<br>
+                    2、主导开发web录制平台，录制APP自动化测试脚本。项目目的：支持浏览器端对ui操作实现自动化测试脚本录制。技术选型：vue2.x, websocket, protobuf<br>
+                    3、主导开发APP3.0自动化脚本测试数据展示平台。项目目的：更好展示自动化测试生成的测试数据结果。技术选型：react hooks, antd, echarts<br>
+                    4、主导开发SkyEye天眼devops运维监控平台。项目目的：监控公司内部one产品，解放运维，测试。私有化售卖，为乙方提供监控服务。技术选型: react hooks, antd, antv/x6
                 </div>
             </div>
         </div>
         <div class="box">
             <div class="casule">技术栈</div>
             <div class="skill">
-                熟练使用react，熟悉生态；<br>
-                熟练掌握javascript、css、html；<br>
-                熟练使用git<br>
-                技术栈拓展：使用过vue2.x开发项目，完整学习过flutter，dart，但是无实际项目经验
+                1、熟练使用git工作流程，熟悉cicd流程；<br>
+                2、熟练掌握javascript、css、html，复刻ui，实现功能；<br>
+                3、熟练使用react hooks完成开发；<br>
+                4、熟练使用typescript;<br>
+                5、熟悉常用webpack配置，优化webpack打包；<br>
+                6、熟悉常用组件库antd，图表库echarts，流程图库antv/x6
             </div>
         </div>
-        <div class="box">
+        <div class="box" style="height: 60px; min-height: 80px;">
             <div class="casule">荣誉证书</div>
             <div class="certificate">
                 英语六级
@@ -249,10 +299,47 @@
         <div class="box">
             <div class="casule">自我评价</div>
             <div class="self-evalution">
-                自学能力尚可，喜欢接纳新的技术，积极学习新的知识，熟悉web前端端开发整体流程。由于公司是做自研产品，项目经历可能并不是特别多，但是同一时期大概维护4-5个项目，包括jsp项目，纯html、nginx部署项目，vue项目，react项目。问题定位能力较强。
+                在博睿近4年，项目冲刺时积极配合，日常迭代任务较轻时，能积极提升自己，为公司内部组件库建设做贡献。工作态度端正，工作效率较高，行动力较强，响应迅速，落实需求较快。<br>
+                乐于用技术解决问题，适合攻坚。对比大牛，自知能力尚有不足，仍在不断学习进步，只会前端，学习更多的内容会有瓶颈，现阶段有学习golang的目标，为更好赋能前端开发能力做铺垫。
             </div>
         </div>
     </div>
+    <div id="case" class="case-wrapper">
+        <div class="case-box">
+            <h3>APP web录制器</h3>
+            <p>
+                web录制器可以上传ios、android的app，app版本，创建空脚本，ui操作录制自动化测试脚本。其中录制脚本需要与手机客户端建立websocket长连接，实时通信，以达到实时操作手机的效果。websocket建联信息，以及app版本、脚本均由后端存储。
+            </p>
+            <img src="recorder.png" alt="">
+        </div>
+        <div class="case-box">
+            <h3>APP3.0数据平台</h3>
+            <p>
+                APP3.0平台，可配置web录制器录制的脚本执行任务，同时通过图表展示分析自动化测试任务数据。
+            </p>
+            <img src="app3.png" alt="">
+        </div>
+        <div class="case-box">
+            <h3>SkyEye天眼自监控</h3>
+            <p>天眼平台监控公司内部服务健康状态，快速定位主机、服务问题，支持配置告警规则，发送巡检报告，统计用户常用功能。</p>
+            <img src="skyeye.png" alt="">
+        </div>
+    </div>
 </body>
+
+<script>
+    function changeTab(type) {
+        const resume = document.getElementById('resume');
+        const project = document.getElementById("case");
+        if (type === 'resume') {
+            resume.style.display = 'block';
+            project.style.display = 'none';
+        }
+        if (type === 'case') {
+            resume.style.display = 'none';
+            project.style.display = 'block';
+        }
+    }
+</script>
 
 </html>
