@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script type="text/javascript" src="https://cdn.staticfile.org/html2canvas/0.4.0/html2canvas.js"></script>
 <style>
     * {
         margin: 0;
@@ -26,7 +27,7 @@
     .head-menu {
         display: flex;
         align-items: center;
-        width: 60%;
+        width: 794px;
         margin: 0 auto;
         gap: 16px;
     }
@@ -41,9 +42,8 @@
     }
 
     .resume-wrapper {
-        width: 60%;
+        width: 794px;
         min-width: 570px;
-        /* height: 100vh; */
         background-color: #fff;
         margin: 0 auto;
         padding-bottom: 16px;
@@ -196,16 +196,33 @@
         width: 60%;
         margin: 0 auto;
     }
+
     .case-wrapper .case-box h3 {
         margin-top: 16px;
         font-size: 18px;
     }
-    .case-wrapper .case-box p{
+
+    .case-wrapper .case-box p {
         margin-top: 8px;
     }
-    .case-wrapper .case-box img{
+
+    .case-wrapper .case-box img {
         width: 100%;
         margin-top: 8px;
+    }
+
+    .page2 {
+        margin-top: 16px;
+        padding: 32px 0 16px;
+        min-height: 900px;
+    }
+
+    .experience {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 0 24px;
+        padding-bottom: 24px;
     }
 </style>
 
@@ -304,6 +321,57 @@
             </div>
         </div>
     </div>
+    <div id="resumePage2" class="resume-wrapper page2">
+        <div class="box">
+            <div class="casule">项目经验</div>
+            <div class="experience">
+                <div class="exp1">
+                    <h3>一、WEB脚本录制器</h3>
+                    <p>平台公有云url: https://apprecorder.bonree.com/</p>
+                    <p>目的： 老版桌面客户端录制器，需要安装使用，操作繁琐，开发web版app脚本录制器解决该问题</p>
+                    <p>目标： 替代老版app脚本录制器</p>
+                    <p>团队： APP产品部</p>
+                    <p>开发成员： 1app客户端开发 1后端 1前端</p>
+                    <p>
+                        1、技术选型，采用vue2开发，前端、后端、手机客户端交互使用websocket长连接，pb协议数据格式交互。
+                        2、本人在独立负责该项目，项目开发过程中，有其他团队成员支援开发。其中重点部分，录制自动化测试脚本部分功能为我独立开发。通过后端提供的手机地址，使用websocket建连，接受客户端推送的录屏截图，实时渲染，发送点击输入等事件到客户端，实现实时操作手机，生成操作脚本。
+                    </p>
+                </div>
+                <div class="exp2">
+                    <h3>二、APP3.0平台</h3>
+                    <p>平台公有云url: https://newapp.bonree.com/</p>
+                    <p>目的： APP2.0平台重构，平台能力增强</p>
+                    <p>目标： 替代APP2.0平台</p>
+                    <p>团队： APP产品部</p>
+                    <p>开发成员： 3后端 3前端</p>
+                    <p>
+                        1、技术选型，采用cra脚手架搭建项目，hooks开发，组件库采用公司基于antd封装的组件库，数据可视化使用echarts， eslint、prettier统一代码风格<br />
+                        2、本人在团队中担任前端负责人角色，负责项目结构搭建，前端开发任务分工，进度推动，代码风格约束，代码评审组织。负责重点模块开发，包括多个echarts自定义图形图表绘制，图表间的联动，图表数据与任务录屏的联动。
+                    </p>
+                </div>
+                <div class="exp3">
+                    <h3>三、Bonree SkyEye天眼自监控平台</h3>
+                    <p>平台公有云url: https://macs.bonree.com/SkyEye</p>
+                    <p>目的：天眼平台的目的是构建协调运维、开发、销售各方良好合作，提高公司产品的运营效率，增加卖点。</p>
+                    <p>目标：产品定位是构建支持运营数据分析，主机、服务监控，智能告警，告警日志，自查排障，自动化部署的devops平台。</p>
+                    <p>团队：devops开发组</p>
+                    <p>开发成员：3后端 1前端</p>
+                    <p>
+                        1、技术选型上，采用react hooks +
+                        ts组合，开发速度快，代码清晰易于维护。使用强大的第三方hooks库ahooks；全局状态管理用的mobx6；接口请求使用axios库，设置拦截器。路由react-router-dom，路由页面均使用懒加载；组件库采用公司基于antd封装的组件库，webpack配置按需引入；拓扑图采用antv/x6绘制，便于编辑修改图形；图表绘制使用echarts；打包使用webpack，未使用第三方脚手架构建项目。eslint校验代码，prettier格式化代码。<br />
+                        2、项目功能模块开发，全部功能模块本人独立开发完成。<br />
+                        - 全局拓扑图，监控公司产品服务状态，拓扑图关系可修改，位置可修改，悬浮展示具体问题信息，点击弹出抽屉展示节点详细信息<br />
+                        - 集群抽屉、主机抽屉展示集群、主机、容器、服务等运维监控信息、图表<br />
+                        - 基础监控展示主机列表，主机信息，资源消耗对比图<br />
+                        - 服务监控展示时服务列表、服务信息，集群资源消耗对比图<br />
+                        - 运营分析图表、表格展示产品使用数据<br />
+                        - 其他还包含巡检管理、巡检设置、规则配置等功能模块
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <button onclick="CreatImg()">导出简历</button> -->
     <div id="case" class="case-wrapper">
         <div class="case-box">
             <h3>APP web录制器</h3>
@@ -326,17 +394,63 @@
         </div>
     </div>
 </body>
+<script type="text/javascript">
+
+    // 导出图片
+    function CreatImg() {
+        console.log('test');
+        html2canvas(document.getElementById('resume'), {
+            onrendered: function (canvas) {
+                // 创建一个canvas
+                // document.body.appendChild(canvas);
+                dataUrl = canvas.toDataURL("image/jpeg", 1.0);
+                DownLoadImg(dataUrl.replace("data:image/jpeg;base64,", ""))
+            },
+        });
+        html2canvas(document.getElementById('resumePage2'), {
+            onrendered: function (canvas) {
+                // 创建一个canvas
+                // document.body.appendChild(canvas);
+                dataUrl = canvas.toDataURL("image/jpeg", 1.0);
+                DownLoadImg(dataUrl.replace("data:image/jpeg;base64,", ""))
+            },
+        });
+    }
+
+    function DownLoadImg(content) {
+        // 格式
+        var imageType = 'png';
+        // 文件名
+        var fileName = Date.now();
+        var raw = window.atob(content);
+        var rawLength = raw.length;
+        var uInt8Array = new Uint8Array(rawLength);
+        for (var i = 0; i < rawLength; ++i) {
+            uInt8Array[i] = raw.charCodeAt(i);
+        }
+        var blob = new Blob([uInt8Array], { type: 'image/' + imageType });
+        var aLink = document.createElement('a');
+        var evt = document.createEvent("HTMLEvents");
+        evt.initEvent("click", true, true);
+        aLink.download = fileName;
+        aLink.href = URL.createObjectURL(blob);
+        aLink.click();
+    }
+</script>
 
 <script>
     function changeTab(type) {
         const resume = document.getElementById('resume');
+        const resumePage2 = document.getElementById('resumePage2');
         const project = document.getElementById("case");
         if (type === 'resume') {
             resume.style.display = 'block';
+            resumePage2.style.display = 'block';
             project.style.display = 'none';
         }
         if (type === 'case') {
             resume.style.display = 'none';
+            resumePage2.style.display = 'none';
             project.style.display = 'block';
         }
     }
